@@ -1,6 +1,6 @@
 {
-	"parent": "nuclearcraft:item/item_small",
+	"parent": "item/generated",
 	"textures": {
-		"layer0": "nuclearcraft:items/californium_251"
+		"layer0": "nuclearcraft:items/californium_251_tiny"
 	}
 }

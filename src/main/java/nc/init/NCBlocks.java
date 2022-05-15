@@ -109,8 +109,6 @@ public class NCBlocks {
 	public static Block block_depleted_berkelium;
 	public static Block block_depleted_californium;
 	
-	public static Block block_ice;
-	
 	public static Block nuclear_furnace_idle;
 	public static Block nuclear_furnace_active;
 	public static Block manufactory_idle;
@@ -244,11 +242,6 @@ public class NCBlocks {
 	public static Block condenser_frame;
 	public static Block condenser_computer_port;
 	
-	public static Block accelerator_electromagnet_idle;
-	public static Block accelerator_electromagnet_active;
-	public static Block electromagnet_supercooler_idle;
-	public static Block electromagnet_supercooler_active;
-	
 	public static Block helium_collector;
 	public static Block helium_collector_compact;
 	public static Block helium_collector_dense;
@@ -296,8 +289,6 @@ public class NCBlocks {
 		block_depleted_curium = withName(new NCBlock(Material.IRON).setCreativeTab(NCTabs.BASE_BLOCK_MATERIALS), "block_depleted_curium");
 		block_depleted_berkelium = withName(new NCBlock(Material.IRON).setCreativeTab(NCTabs.BASE_BLOCK_MATERIALS), "block_depleted_berkelium");
 		block_depleted_californium = withName(new NCBlock(Material.IRON).setCreativeTab(NCTabs.BASE_BLOCK_MATERIALS), "block_depleted_californium");
-		
-		block_ice = withName(new NCBlockIce(), "block_ice");
 		
 		if (NCConfig.register_processor[0]) nuclear_furnace_idle = withName(new BlockNuclearFurnace(false), "nuclear_furnace_idle");
 		if (NCConfig.register_processor[0]) nuclear_furnace_active = withName(new BlockNuclearFurnace(true), "nuclear_furnace_active");
@@ -427,11 +418,6 @@ public class NCBlocks {
 		turbine_outlet = withName(new BlockTurbineOutlet(), "turbine_outlet");
 		turbine_computer_port = withName(new BlockTurbineComputerPort(), "turbine_computer_port");
 		
-		accelerator_electromagnet_idle = withName(new BlockActivatable(ActivatableTileType.ACCELERATOR_ELECTROMAGNET, false));
-		accelerator_electromagnet_active = withName(new BlockActivatable(ActivatableTileType.ACCELERATOR_ELECTROMAGNET, true));
-		electromagnet_supercooler_idle = withName(new BlockActivatable(ActivatableTileType.ELECTROMAGNET_SUPERCOOLER, false));
-		electromagnet_supercooler_active = withName(new BlockActivatable(ActivatableTileType.ELECTROMAGNET_SUPERCOOLER, true));
-		
 		if (NCConfig.register_passive[0]) {
 			helium_collector = withName(new BlockSimpleTile(SimpleTileType.HELIUM_COLLECTOR));
 			helium_collector_compact = withName(new BlockSimpleTile(SimpleTileType.HELIUM_COLLECTOR_COMPACT));
@@ -487,8 +473,6 @@ public class NCBlocks {
 		registerBlock(block_depleted_curium);
 		registerBlock(block_depleted_berkelium);
 		registerBlock(block_depleted_californium);
-		
-		registerBlock(block_ice);
 		
 		if (NCConfig.register_processor[0]) registerBlock(nuclear_furnace_idle);
 		if (NCConfig.register_processor[0]) registerBlock(nuclear_furnace_active);
@@ -618,11 +602,6 @@ public class NCBlocks {
 		registerBlock(turbine_outlet);
 		registerBlock(turbine_computer_port);
 		
-		registerBlock(accelerator_electromagnet_idle, InfoHelper.formattedInfo(infoLine("accelerator_electromagnet_idle"), UnitHelper.ratePrefix(NCConfig.accelerator_electromagnet_power, 5, "RF")));
-		registerBlock(accelerator_electromagnet_active);
-		registerBlock(electromagnet_supercooler_idle, InfoHelper.formattedInfo(infoLine("electromagnet_supercooler_idle"), UnitHelper.ratePrefix(NCConfig.accelerator_electromagnet_power, 5, "RF"), UnitHelper.ratePrefix(NCConfig.accelerator_supercooler_coolant, 5, "B", -1)));
-		registerBlock(electromagnet_supercooler_active);
-		
 		if (NCConfig.register_passive[0]) {
 			registerBlock(helium_collector, InfoHelper.formattedInfo(infoLine("helium_collector"), UnitHelper.ratePrefix(NCConfig.processor_passive_rate[0], 5, "B", -1)));
 			registerBlock(helium_collector_compact, InfoHelper.formattedInfo(infoLine("helium_collector"), UnitHelper.ratePrefix(NCConfig.processor_passive_rate[0]*8, 5, "B", -1)));
@@ -690,8 +669,6 @@ public class NCBlocks {
 		registerRender(block_depleted_curium);
 		registerRender(block_depleted_berkelium);
 		registerRender(block_depleted_californium);
-		
-		registerRender(block_ice);
 		
 		if (NCConfig.register_processor[0]) registerRender(nuclear_furnace_idle);
 		if (NCConfig.register_processor[0]) registerRender(nuclear_furnace_active);
@@ -822,11 +799,6 @@ public class NCBlocks {
 		registerRender(turbine_inlet);
 		registerRender(turbine_outlet);
 		registerRender(turbine_computer_port);
-		
-		registerRender(accelerator_electromagnet_idle);
-		registerRender(accelerator_electromagnet_active);
-		registerRender(electromagnet_supercooler_idle);
-		registerRender(electromagnet_supercooler_active);
 		
 		if (NCConfig.register_passive[0]) {
 			registerRender(helium_collector);

@@ -32,29 +32,6 @@ public class TilePassive {
 		}
 	}
 	
-	public static class AcceleratorElectromagnet extends ElectromagnetAbstract {
-		
-		public AcceleratorElectromagnet() {
-			super("accelerator", NCConfig.accelerator_electromagnet_power, NCConfig.machine_update_rate / 5);
-		}
-	}
-	
-	public static class ElectromagnetSupercooler extends TilePassiveAbstract implements IEnergySpread, IFluidSpread {
-		
-		public ElectromagnetSupercooler() {
-			super("electromagnet_supercooler", -NCConfig.accelerator_electromagnet_power, FluidRegistry.getFluid("liquidhelium"), -NCConfig.accelerator_supercooler_coolant, NCConfig.machine_update_rate / 5);
-		}
-		
-		@Override
-		public void update() {
-			super.update();
-			if(!world.isRemote && pushCount == 0) {
-				spreadEnergy();
-				spreadFluid();
-			}
-		}
-	}
-	
 	public static abstract class HeliumCollectorAbstract extends TilePassiveAbstract {
 		
 		public HeliumCollectorAbstract(String type, int rateMult) {

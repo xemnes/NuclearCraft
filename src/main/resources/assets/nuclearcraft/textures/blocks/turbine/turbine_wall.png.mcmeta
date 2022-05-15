@@ -5,6 +5,13 @@
 		"layer":"SOLID",
 		"textures":[
 			"nuclearcraft:blocks/turbine/turbine_wall_ctm"
-		]
+		],
+        "extra": {
+            "connect_to": [
+                { "block": "nuclearcraft:turbine_wall" },
+                { "block": "nuclearcraft:turbine_rotor_bearing" },
+                { "block": "nuclearcraft:turbine_dynamo_coil" }
+            ]
+        }
 	}
 }

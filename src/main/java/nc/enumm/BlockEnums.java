@@ -407,9 +407,7 @@ public class BlockEnums {
 	
 	public enum ActivatableTileType implements IStringSerializable {
 		FUSION_ELECTROMAGNET("fusion_electromagnet", NCTabs.FUSION),
-		FUSION_ELECTROMAGNET_TRANSPARENT("fusion_electromagnet_transparent", NCTabs.FUSION),
-		ACCELERATOR_ELECTROMAGNET("accelerator_electromagnet", NCTabs.ACCELERATOR),
-		ELECTROMAGNET_SUPERCOOLER("electromagnet_supercooler", NCTabs.ACCELERATOR);
+		FUSION_ELECTROMAGNET_TRANSPARENT("fusion_electromagnet_transparent", NCTabs.FUSION);
 		
 		private String name;
 		private CreativeTabs tab;
@@ -430,10 +428,6 @@ public class BlockEnums {
 				return new TilePassive.FusionElectromagnet();
 			case FUSION_ELECTROMAGNET_TRANSPARENT:
 				return new TilePassive.FusionElectromagnet();
-			case ACCELERATOR_ELECTROMAGNET:
-				return new TilePassive.AcceleratorElectromagnet();
-			case ELECTROMAGNET_SUPERCOOLER:
-				return new TilePassive.ElectromagnetSupercooler();
 			default:
 				return null;
 			}
@@ -449,10 +443,6 @@ public class BlockEnums {
 				return NCBlocks.fusion_electromagnet_idle;
 			case FUSION_ELECTROMAGNET_TRANSPARENT:
 				return NCBlocks.fusion_electromagnet_transparent_idle;
-			case ACCELERATOR_ELECTROMAGNET:
-				return NCBlocks.accelerator_electromagnet_idle;
-			case ELECTROMAGNET_SUPERCOOLER:
-				return NCBlocks.electromagnet_supercooler_idle;
 			default:
 				return NCBlocks.fusion_electromagnet_idle;
 			}
@@ -464,10 +454,6 @@ public class BlockEnums {
 				return NCBlocks.fusion_electromagnet_active;
 			case FUSION_ELECTROMAGNET_TRANSPARENT:
 				return NCBlocks.fusion_electromagnet_transparent_active;
-			case ACCELERATOR_ELECTROMAGNET:
-				return NCBlocks.accelerator_electromagnet_active;
-			case ELECTROMAGNET_SUPERCOOLER:
-				return NCBlocks.electromagnet_supercooler_active;
 			default:
 				return NCBlocks.fusion_electromagnet_active;
 			}

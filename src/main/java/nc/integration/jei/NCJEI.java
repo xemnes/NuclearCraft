@@ -254,7 +254,6 @@ public class NCJEI implements IModPlugin {
 		blacklist(jeiHelpers, NCBlocks.fusion_dummy_side, NCBlocks.fusion_dummy_top);
 		
 		blacklist(jeiHelpers, NCBlocks.fusion_electromagnet_active, NCBlocks.fusion_electromagnet_transparent_active);
-		blacklist(jeiHelpers, NCBlocks.accelerator_electromagnet_active, NCBlocks.electromagnet_supercooler_active);
 		
 		if (!ModCheck.openComputersLoaded()) {
 			blacklist(jeiHelpers, NCBlocks.salt_fission_computer_port);

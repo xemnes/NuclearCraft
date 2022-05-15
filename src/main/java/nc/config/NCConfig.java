@@ -37,7 +37,6 @@ public class NCConfig {
 	public static final String CATEGORY_SALT_FISSION = "salt_fission";
 	public static final String CATEGORY_HEAT_EXCHANGER = "heat_exchanger";
 	public static final String CATEGORY_TURBINE = "turbine";
-	public static final String CATEGORY_ACCELERATOR = "accelerator";
 	public static final String CATEGORY_ENERGY_STORAGE = "energy_storage";
 	public static final String CATEGORY_TOOLS = "tools";
 	public static final String CATEGORY_ARMOR = "armor";
@@ -204,9 +203,6 @@ public class NCConfig {
 	public static double[] turbine_expansion_level;
 	public static int turbine_mb_per_blade;
 	public static double turbine_sound_volume;
-	
-	public static int accelerator_electromagnet_power;
-	public static int accelerator_supercooler_coolant;
 	
 	public static int[] battery_capacity;
 	
@@ -686,11 +682,6 @@ public class NCConfig {
 		Property propertyTurbineSoundVolume = config.get(CATEGORY_TURBINE, "turbine_sound_volume", 1D, Lang.localise("gui.config.turbine.turbine_sound_volume.comment"), 0D, 15D);
 		propertyTurbineSoundVolume.setLanguageKey("gui.config.turbine.turbine_sound_volume");
 		
-		Property propertyAcceleratorElectromagnetPower = config.get(CATEGORY_ACCELERATOR, "accelerator_electromagnet_power", 20000, Lang.localise("gui.config.accelerator.accelerator_electromagnet_power.comment"), 0, Integer.MAX_VALUE);
-		propertyAcceleratorElectromagnetPower.setLanguageKey("gui.config.accelerator.accelerator_electromagnet_power");
-		Property propertyAcceleratorSupercoolerCoolant = config.get(CATEGORY_ACCELERATOR, "accelerator_supercooler_coolant", 4, Lang.localise("gui.config.accelerator.accelerator_supercooler_coolant.comment"), 0, 32767);
-		propertyAcceleratorSupercoolerCoolant.setLanguageKey("gui.config.accelerator.accelerator_supercooler_coolant");
-		
 		Property propertyBatteryCapacity = config.get(CATEGORY_ENERGY_STORAGE, "battery_capacity", new int[] {1600000, 6400000, 25600000, 102400000, 32000000, 128000000, 512000000, 2048000000}, Lang.localise("gui.config.energy_storage.battery_capacity.comment"), 1, Integer.MAX_VALUE);
 		propertyBatteryCapacity.setLanguageKey("gui.config.energy_storage.battery_capacity");
 		
@@ -1126,11 +1117,6 @@ public class NCConfig {
 		propertyOrderTurbine.add(propertyTurbineSoundVolume.getName());
 		config.setCategoryPropertyOrder(CATEGORY_TURBINE, propertyOrderTurbine);
 		
-		List<String> propertyOrderAccelerator = new ArrayList<String>();
-		propertyOrderAccelerator.add(propertyAcceleratorElectromagnetPower.getName());
-		propertyOrderAccelerator.add(propertyAcceleratorSupercoolerCoolant.getName());
-		config.setCategoryPropertyOrder(CATEGORY_ACCELERATOR, propertyOrderAccelerator);
-		
 		List<String> propertyOrderEnergyStorage = new ArrayList<String>();
 		propertyOrderEnergyStorage.add(propertyBatteryCapacity.getName());
 		config.setCategoryPropertyOrder(CATEGORY_ENERGY_STORAGE, propertyOrderEnergyStorage);
@@ -1426,9 +1412,6 @@ public class NCConfig {
 			turbine_mb_per_blade = propertyTurbineMBPerBlade.getInt();
 			turbine_sound_volume = propertyTurbineSoundVolume.getDouble();
 			
-			accelerator_electromagnet_power = propertyAcceleratorElectromagnetPower.getInt();
-			accelerator_supercooler_coolant = propertyAcceleratorSupercoolerCoolant.getInt();
-			
 			battery_capacity = readIntegerArrayFromConfig(propertyBatteryCapacity);
 			
 			tool_mining_level = readIntegerArrayFromConfig(propertyToolMiningLevel);
@@ -1723,9 +1706,6 @@ public class NCConfig {
 		propertyTurbineExpansionLevel.set(turbine_expansion_level);
 		propertyTurbineMBPerBlade.set(turbine_mb_per_blade);
 		propertyTurbineSoundVolume.set(turbine_sound_volume);
-		
-		propertyAcceleratorElectromagnetPower.set(accelerator_electromagnet_power);
-		propertyAcceleratorSupercoolerCoolant.set(accelerator_supercooler_coolant);
 		
 		propertyBatteryCapacity.set(battery_capacity);
 		

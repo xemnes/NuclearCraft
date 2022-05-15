@@ -1,6 +1,6 @@
 {
-	"parent": "nuclearcraft:item/item_small",
+	"parent": "item/generated",
 	"textures": {
-		"layer0": "nuclearcraft:items/boron_10"
+		"layer0": "nuclearcraft:items/boron_10_tiny"
 	}
 }

@@ -1,6 +1,6 @@
 {
-	"parent": "nuclearcraft:item/item_small",
+	"parent": "item/generated",
 	"textures": {
-		"layer0": "nuclearcraft:items/neptunium_236_oxide"
+		"layer0": "nuclearcraft:items/neptunium_236_oxide_tiny"
 	}
 }

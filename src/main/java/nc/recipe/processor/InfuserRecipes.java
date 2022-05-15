@@ -29,8 +29,6 @@ public class InfuserRecipes extends ProcessorRecipeHandler {
 		addOxidizingRecipe("dustManganese", FluidStackHelper.BUCKET_VOLUME);
 		addRecipe("dustManganeseOxide", fluidStack("oxygen", FluidStackHelper.BUCKET_VOLUME), "dustManganeseDioxide", 1D, 1D);
 		
-		addRecipe(Lists.newArrayList(Blocks.ICE, Blocks.PACKED_ICE), fluidStack("liquidhelium", 50), NCBlocks.block_ice, 0.2D, 0.5D);
-		
 		addRecipe(new ItemStack(NCBlocks.cooler, 1, 0), fluidStack("water", FluidStackHelper.BUCKET_VOLUME), new ItemStack(NCBlocks.cooler, 1, 1), 1D, 1D);
 		addRecipe(new ItemStack(NCBlocks.cooler, 1, 0), fluidStack("liquidhelium", FluidStackHelper.BUCKET_VOLUME), new ItemStack(NCBlocks.cooler, 1, 8), 1D, 1D);
 		addRecipe(new ItemStack(NCBlocks.cooler, 1, 0), fluidStack("cryotheum", FluidStackHelper.BUCKET_VOLUME*2), new ItemStack(NCBlocks.cooler, 1, 10), 1D, 1D);

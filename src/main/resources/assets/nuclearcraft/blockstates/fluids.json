@@ -99,9 +99,10 @@
 			}
 		},
 		"fluid_plasma": {
-			"model": "forge:fluid",
-			"custom": {
-				"fluid": "plasma"
+			"model": "nuclearcraft:fluid",
+			"textures": {
+				"still": "nuclearcraft:blocks/fluids/plasma",
+				"flowing": "nuclearcraft:blocks/fluids/plasma_flow"
 			}
 		},
 		"fluid_lithium": {

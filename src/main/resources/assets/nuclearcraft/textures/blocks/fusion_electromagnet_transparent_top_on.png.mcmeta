@@ -5,6 +5,12 @@
 		"layer":"CUTOUT",
 		"textures":[
 			"nuclearcraft:blocks/fusion_electromagnet_transparent_top_on_ctm"
-		]
+		],
+        "extra": {
+            "connect_to": [
+                { "block": "nuclearcraft:fusion_electromagnet_transparent_active" },
+                { "block": "nuclearcraft:fusion_electromagnet_transparent_idle" }
+            ]
+        }
 	}
 }
