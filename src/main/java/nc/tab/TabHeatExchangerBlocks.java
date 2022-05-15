@@ -12,6 +12,6 @@ public class TabHeatExchangerBlocks extends CreativeTabs {
 
 	@Override
 	public ItemStack createIcon() {
-		return new ItemStack(NCBlocks.salt_fission_controller, 1);
+		return new ItemStack(NCBlocks.heat_exchanger_controller, 1);
 	}
 }

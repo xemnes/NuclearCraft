@@ -1,0 +1,17 @@
+{
+	"ctm": {
+		"ctm_version": 1,
+		"type":"ctm",
+		"layer":"SOLID",
+		"textures":[
+			"nuclearcraft:blocks/turbine/turbine_dynamo_coil_beryllium_ctm"
+		],
+        "extra": {
+            "connect_to": [
+                { "block": "nuclearcraft:turbine_wall" },
+                { "block": "nuclearcraft:turbine_rotor_bearing" },
+                { "block": "nuclearcraft:turbine_dynamo_coil" }
+            ]
+        }
+	}
+}
