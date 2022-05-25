@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_top",
+    "textures": {
+        "bottom": "nuclearcraft:blocks/salt_fission_door_lower",
+        "top": "nuclearcraft:blocks/salt_fission_door_upper"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "block/trapdoor_open",
+    "textures": {
+        "texture": "nuclearcraft:blocks/salt_fission_trapdoor"
+    }
+}

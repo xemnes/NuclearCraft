@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_top",
+    "textures": {
+        "bottom": "nuclearcraft:blocks/heat_exchanger_door_lower",
+        "top": "nuclearcraft:blocks/heat_exchanger_door_upper"
+    }
+}
