@@ -19,6 +19,7 @@ import nc.tile.processor.TileItemFluidProcessor;
 import nc.util.Lang;
 import nc.util.NCUtil;
 import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -51,12 +52,17 @@ public class GuiIngotFormer extends GuiItemFluidProcessor {
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 		super.drawGuiContainerForegroundLayer(mouseX, mouseY);
+
+		GlStateManager.color(1F, 1F, 1F, 1F);
+		mc.getTextureManager().bindTexture(gui_textures);
+		drawTexturedModalRect(56, 35, 176, 41, 16, 16);
+
 		drawUpgradeRenderers();
 	}
 	
 	protected void drawUpgradeRenderers() {
-		new GuiItemRenderer(132, ySize - 102, 0.5F, NCItems.upgrade, 0).draw();
-		new GuiItemRenderer(152, ySize - 102, 0.5F, NCItems.upgrade, 1).draw();
+		new GuiItemRenderer(132, ySize - 102, 0.2F, NCItems.upgrade, 0).draw();
+		new GuiItemRenderer(152, ySize - 102, 0.2F, NCItems.upgrade, 1).draw();
 	}
 	
 	@Override
@@ -67,10 +73,10 @@ public class GuiIngotFormer extends GuiItemFluidProcessor {
 			int e = (int) Math.round(74D*tile.getEnergyStorage().getEnergyStored()/tile.getEnergyStorage().getMaxEnergyStored());
 			drawTexturedModalRect(guiLeft + 8, guiTop + 6 + 74 - e, 176, 90 + 74 - e, 16, e);
 		}
-		else drawGradientRect(guiLeft + 8, guiTop + 6, guiLeft + 8 + 16, guiTop + 6 + 74, 0xFFC6C6C6, 0xFF8B8B8B);
+		else drawGradientRect(guiLeft + 8, guiTop + 6, guiLeft + 8 + 16, guiTop + 6 + 74, 0x494949, 0x494949);
 		
 		drawTexturedModalRect(guiLeft + 74, guiTop + 35, 176, 3, getCookProgressScaled(37), 16);
-		
+
 		drawBackgroundExtras();
 	}
 	

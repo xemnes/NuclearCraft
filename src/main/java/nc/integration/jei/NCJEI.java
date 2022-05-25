@@ -223,10 +223,12 @@ public class NCJEI implements IModPlugin {
 				blacklist(jeiHelpers, new ItemStack(NCBlocks.ore, 1, i), new ItemStack(NCBlocks.ingot_block, 1, i), new ItemStack(NCItems.ingot, 1, i), new ItemStack(NCItems.dust, 1, i));
 			}
 		}
-		
-		blacklist(jeiHelpers, NCItems.fuel_rod);
+
 		blacklist(jeiHelpers, NCBlocks.reactor_door);
-		
+		blacklist(jeiHelpers, NCBlocks.salt_fission_door);
+		blacklist(jeiHelpers, NCBlocks.heat_exchanger_door);
+		blacklist(jeiHelpers, NCBlocks.turbine_door);
+
 		blacklist(jeiHelpers, NCBlocks.nuclear_furnace_active);
 		blacklist(jeiHelpers, NCBlocks.manufactory_active);
 		blacklist(jeiHelpers, NCBlocks.isotope_separator_active);

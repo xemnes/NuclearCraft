@@ -81,6 +81,15 @@ public class GuiFusionCore extends NCGui {
 		String input2 = tile.getTanks().get(1).getFluid() != null ? tile.getTanks().get(1).getFluidLocalizedName() : (tile.getTanks().get(7).getFluid() != null ? tile.getTanks().get(7).getFluidLocalizedName() : TileFusionCore.NO_FUEL);
 		fontRenderer.drawString(input1, 108 - widthHalf(input1), 76, fontColor);
 		fontRenderer.drawString(input2, 108 - widthHalf(input2), 87, fontColor);
+
+		GlStateManager.color(1F, 1F, 1F, 1F);
+		mc.getTextureManager().bindTexture(gui_textures);
+		drawTexturedModalRect(38, 6, 196, 0, 6, 46);
+		drawTexturedModalRect(38, 55, 196, 0, 6, 46);
+		drawTexturedModalRect(172, 6, 196, 0, 6, 46);
+		drawTexturedModalRect(182, 6, 196, 0, 6, 46);
+		drawTexturedModalRect(172, 55, 196, 0, 6, 46);
+		drawTexturedModalRect(182, 55, 196, 0, 6, 46);
 	}
 	
 	@Override

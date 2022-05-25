@@ -47,9 +47,11 @@ public class NCItems {
 	public static Item part;
 	public static Item upgrade;
 	public static Item tiny_dust_lead;
-	public static Item fuel_rod;
 	public static Item reactor_door;
-	
+	public static Item salt_fission_door;
+	public static Item heat_exchanger_door;
+	public static Item turbine_door;
+
 	public static Item thorium;
 	public static Item uranium;
 	public static Item neptunium;
@@ -78,8 +80,6 @@ public class NCItems {
 	public static Item depleted_fuel_curium;
 	public static Item depleted_fuel_berkelium;
 	public static Item depleted_fuel_californium;
-	
-	public static Item depleted_fuel_ic2;
 	
 	public static Item boron;
 	public static Item lithium;
@@ -135,9 +135,11 @@ public class NCItems {
 		upgrade = withName(new NCItemMeta(MetaEnums.UpgradeType.class, NCInfo.upgradeInfo()), "upgrade");
 		
 		tiny_dust_lead = withName(new NCItem(), "tiny_dust_lead");
-		fuel_rod = withName(new NCItem(), "fuel_rod");
 		reactor_door = withName(new NCItemDoor(NCBlocks.reactor_door), "reactor_door_item");
-		
+		salt_fission_door = withName(new NCItemDoor(NCBlocks.salt_fission_door), "salt_fission_door_item");
+		heat_exchanger_door = withName(new NCItemDoor(NCBlocks.heat_exchanger_door), "heat_exchanger_door_item");
+		turbine_door = withName(new NCItemDoor(NCBlocks.turbine_door), "turbine_door_item");
+
 		thorium = withName(new NCItemMeta(MetaEnums.ThoriumType.class), "thorium");
 		uranium = withName(new NCItemMeta(MetaEnums.UraniumType.class), "uranium");
 		neptunium = withName(new NCItemMeta(MetaEnums.NeptuniumType.class), "neptunium");
@@ -166,8 +168,6 @@ public class NCItems {
 		depleted_fuel_curium = withName(new ItemDepletedFissionFuel(MetaEnums.CuriumDepletedFuelType.class), "depleted_fuel_curium");
 		depleted_fuel_berkelium = withName(new ItemDepletedFissionFuel(MetaEnums.BerkeliumDepletedFuelType.class), "depleted_fuel_berkelium");
 		depleted_fuel_californium = withName(new ItemDepletedFissionFuel(MetaEnums.CaliforniumDepletedFuelType.class), "depleted_fuel_californium");
-		
-		depleted_fuel_ic2 = withName(new ItemDepletedFissionFuel(MetaEnums.IC2DepletedFuelType.class), "depleted_fuel_ic2");
 		
 		boron = withName(new NCItemMeta(MetaEnums.BoronType.class), "boron");
 		lithium = withName(new NCItemMeta(MetaEnums.LithiumType.class), "lithium");
@@ -223,9 +223,11 @@ public class NCItems {
 		registerItem(part, NCTabs.BASE_ITEM_MATERIALS);
 		registerItem(upgrade, NCTabs.MACHINES);
 		registerItem(tiny_dust_lead, NCTabs.BASE_ITEM_MATERIALS);
-		registerItem(fuel_rod, null);
 		registerItem(reactor_door, NCTabs.FISSION_BLOCKS);
-		
+		registerItem(salt_fission_door, NCTabs.SALT_FISSION_BLOCKS);
+		registerItem(heat_exchanger_door, NCTabs.HEAT_EXCHANGER_BLOCKS);
+		registerItem(turbine_door, NCTabs.TURBINE_BLOCKS);
+
 		registerItem(thorium, NCTabs.FISSION_MATERIALS);
 		registerItem(uranium, NCTabs.FISSION_MATERIALS);
 		registerItem(neptunium, NCTabs.FISSION_MATERIALS);
@@ -254,8 +256,6 @@ public class NCItems {
 		registerItem(depleted_fuel_curium, NCTabs.FISSION_MATERIALS);
 		registerItem(depleted_fuel_berkelium, NCTabs.FISSION_MATERIALS);
 		registerItem(depleted_fuel_californium, NCTabs.FISSION_MATERIALS);
-		
-		registerItem(depleted_fuel_ic2, NCTabs.FISSION_MATERIALS);
 		
 		registerItem(boron, NCTabs.BASE_ITEM_MATERIALS);
 		registerItem(lithium, NCTabs.BASE_ITEM_MATERIALS);
@@ -339,9 +339,11 @@ public class NCItems {
 		}
 		
 		registerRender(tiny_dust_lead);
-		registerRender(fuel_rod);
 		registerRender(reactor_door);
-		
+		registerRender(salt_fission_door);
+		registerRender(heat_exchanger_door);
+		registerRender(turbine_door);
+
 		for(int i = 0; i < MetaEnums.ThoriumType.values().length; i++) {
 			registerRender(thorium, i, "thorium" + MetaEnums.ThoriumType.values()[i].getName());
 		}
@@ -444,10 +446,6 @@ public class NCItems {
 		
 		for(int i = 0; i < MetaEnums.CaliforniumDepletedFuelType.values().length; i++) {
 			registerRender(depleted_fuel_californium, i, "depleted_fuel_californium_" + MetaEnums.CaliforniumDepletedFuelType.values()[i].getName());
-		}
-		
-		for(int i = 0; i < MetaEnums.IC2DepletedFuelType.values().length; i++) {
-			registerRender(depleted_fuel_ic2, i, "depleted_fuel_ic2_" + MetaEnums.IC2DepletedFuelType.values()[i].getName());
 		}
 		
 		for(int i = 0; i < MetaEnums.BoronType.values().length; i++) {

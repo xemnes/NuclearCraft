@@ -19,6 +19,7 @@ import nc.tile.processor.TileItemFluidProcessor;
 import nc.util.Lang;
 import nc.util.NCUtil;
 import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -52,12 +53,18 @@ public class GuiDissolver extends GuiItemFluidProcessor {
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 		super.drawGuiContainerForegroundLayer(mouseX, mouseY);
+
+		GlStateManager.color(1F, 1F, 1F, 1F);
+		mc.getTextureManager().bindTexture(gui_textures);
+		drawTexturedModalRect(66, 35, 176, 41, 16, 16);
+		drawTexturedModalRect(122, 31, 176, 57, 24, 24);
+
 		drawUpgradeRenderers();
 	}
 	
 	protected void drawUpgradeRenderers() {
-		new GuiItemRenderer(132, ySize - 102, 0.5F, NCItems.upgrade, 0).draw();
-		new GuiItemRenderer(152, ySize - 102, 0.5F, NCItems.upgrade, 1).draw();
+		new GuiItemRenderer(132, ySize - 102, 0.2F, NCItems.upgrade, 0).draw();
+		new GuiItemRenderer(152, ySize - 102, 0.2F, NCItems.upgrade, 1).draw();
 	}
 	
 	@Override

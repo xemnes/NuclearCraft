@@ -8,6 +8,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
 public class NCBlockTrapDoor extends BlockTrapDoor {
+
+	protected static boolean keepInventory;
 	
 	public NCBlockTrapDoor(Material material) {
 		super(material);

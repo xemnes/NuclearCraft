@@ -1702,34 +1702,6 @@ public class MetaEnums {
 		}
 	}
 	
-	public static enum IC2DepletedFuelType implements IStringSerializable, IItemMeta {
-		U("u", 0),
-		MOX("mox", 1);
-		
-		private String name;
-		private int id;
-		
-		private IC2DepletedFuelType(String name, int id) {
-			this.name = name;
-			this.id = id;
-		}
-
-		@Override
-		public String getName() {
-			return name;
-		}
-		
-		@Override
-		public String toString() {
-			return getName();
-		}
-		
-		@Override
-		public int getID() {
-			return id;
-		}
-	}
-	
 	public static enum BoronType implements IStringSerializable, IItemMeta {
 		_10("_10", 0),
 		_10_TINY("_10_tiny", 1),

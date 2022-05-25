@@ -1,7 +1,7 @@
 {
 	"parent": "block/cube_column",
 	"textures": {
-		"end": "nuclearcraft:blocks/rtg_californium_top",
+		"end": "nuclearcraft:blocks/rtg_top",
 		"side": "nuclearcraft:blocks/rtg_californium_side"
 	}
 }

@@ -36,41 +36,11 @@ import nc.enumm.MetaEnums.FissionBlockType;
 import nc.enumm.MetaEnums.IngotType;
 import nc.enumm.MetaEnums.OreType;
 import nc.multiblock.heatExchanger.HeatExchangerTubeType;
-import nc.multiblock.heatExchanger.block.BlockHeatExchangerComputerPort;
-import nc.multiblock.heatExchanger.block.BlockHeatExchangerCondenserTube;
-import nc.multiblock.heatExchanger.block.BlockHeatExchangerController;
-import nc.multiblock.heatExchanger.block.BlockHeatExchangerFrame;
-import nc.multiblock.heatExchanger.block.BlockHeatExchangerGlass;
-import nc.multiblock.heatExchanger.block.BlockHeatExchangerTube;
-import nc.multiblock.heatExchanger.block.BlockHeatExchangerVent;
-import nc.multiblock.heatExchanger.block.BlockHeatExchangerWall;
-import nc.multiblock.saltFission.block.BlockSaltFissionBeam;
-import nc.multiblock.saltFission.block.BlockSaltFissionComputerPort;
-import nc.multiblock.saltFission.block.BlockSaltFissionController;
-import nc.multiblock.saltFission.block.BlockSaltFissionDistributor;
-import nc.multiblock.saltFission.block.BlockSaltFissionFrame;
-import nc.multiblock.saltFission.block.BlockSaltFissionGlass;
-import nc.multiblock.saltFission.block.BlockSaltFissionHeater;
-import nc.multiblock.saltFission.block.BlockSaltFissionModerator;
-import nc.multiblock.saltFission.block.BlockSaltFissionRedstonePort;
-import nc.multiblock.saltFission.block.BlockSaltFissionRetriever;
-import nc.multiblock.saltFission.block.BlockSaltFissionVent;
-import nc.multiblock.saltFission.block.BlockSaltFissionVessel;
-import nc.multiblock.saltFission.block.BlockSaltFissionWall;
+import nc.multiblock.heatExchanger.block.*;
+import nc.multiblock.saltFission.block.*;
 import nc.multiblock.turbine.TurbineDynamoCoilType;
 import nc.multiblock.turbine.TurbineRotorBladeUtil.TurbineRotorBladeType;
-import nc.multiblock.turbine.block.BlockTurbineComputerPort;
-import nc.multiblock.turbine.block.BlockTurbineController;
-import nc.multiblock.turbine.block.BlockTurbineDynamoCoil;
-import nc.multiblock.turbine.block.BlockTurbineFrame;
-import nc.multiblock.turbine.block.BlockTurbineGlass;
-import nc.multiblock.turbine.block.BlockTurbineInlet;
-import nc.multiblock.turbine.block.BlockTurbineOutlet;
-import nc.multiblock.turbine.block.BlockTurbineRotorBearing;
-import nc.multiblock.turbine.block.BlockTurbineRotorBlade;
-import nc.multiblock.turbine.block.BlockTurbineRotorShaft;
-import nc.multiblock.turbine.block.BlockTurbineRotorStator;
-import nc.multiblock.turbine.block.BlockTurbineWall;
+import nc.multiblock.turbine.block.*;
 import nc.radiation.RadiationHelper;
 import nc.tab.NCTabs;
 import nc.tile.energy.battery.BatteryType;
@@ -206,6 +176,8 @@ public class NCBlocks {
 	public static Block salt_fission_distributor;
 	public static Block salt_fission_retriever;
 	public static Block salt_fission_redstone_port;
+	public static Block salt_fission_door;
+	public static Block salt_fission_trapdoor;
 	public static Block salt_fission_computer_port;
 	
 	public static Block heat_exchanger_controller;
@@ -219,6 +191,8 @@ public class NCBlocks {
 	public static Block heat_exchanger_condenser_tube_copper;
 	public static Block heat_exchanger_condenser_tube_hard_carbon;
 	public static Block heat_exchanger_condenser_tube_thermoconducting;
+	public static Block heat_exchanger_door;
+	public static Block heat_exchanger_trapdoor;
 	public static Block heat_exchanger_computer_port;
 	
 	public static Block turbine_controller;
@@ -234,6 +208,8 @@ public class NCBlocks {
 	public static Block turbine_dynamo_coil;
 	public static Block turbine_inlet;
 	public static Block turbine_outlet;
+	public static Block turbine_door;
+	public static Block turbine_trapdoor;
 	public static Block turbine_computer_port;
 	
 	public static Block condenser_controller;
@@ -388,6 +364,8 @@ public class NCBlocks {
 		salt_fission_distributor = withName(new BlockSaltFissionDistributor(), "salt_fission_distributor");
 		salt_fission_retriever = withName(new BlockSaltFissionRetriever(), "salt_fission_retriever");
 		salt_fission_redstone_port = withName(new BlockSaltFissionRedstonePort(), "salt_fission_redstone_port");
+		salt_fission_door = withName(new BlockSaltFissionDoor(Material.IRON), "salt_fission_door");
+		salt_fission_trapdoor = withName(new BlockSaltFissionTrapdoor(Material.IRON), "salt_fission_trapdoor");
 		salt_fission_computer_port = withName(new BlockSaltFissionComputerPort(), "salt_fission_computer_port");
 		
 		heat_exchanger_controller = withName(new BlockHeatExchangerController(), "heat_exchanger_controller");
@@ -401,6 +379,8 @@ public class NCBlocks {
 		heat_exchanger_condenser_tube_copper = withName(new BlockHeatExchangerCondenserTube(HeatExchangerTubeType.COPPER), "heat_exchanger_condenser_tube_copper");
 		heat_exchanger_condenser_tube_hard_carbon = withName(new BlockHeatExchangerCondenserTube(HeatExchangerTubeType.HARD_CARBON), "heat_exchanger_condenser_tube_hard_carbon");
 		heat_exchanger_condenser_tube_thermoconducting = withName(new BlockHeatExchangerCondenserTube(HeatExchangerTubeType.THERMOCONDUCTING), "heat_exchanger_condenser_tube_thermoconducting");
+		heat_exchanger_door = withName(new BlockHeatExchangerDoor(Material.IRON), "heat_exchanger_door");
+		heat_exchanger_trapdoor = withName(new BlockHeatExchangerTrapdoor(Material.IRON), "heat_exchanger_trapdoor");
 		heat_exchanger_computer_port = withName(new BlockHeatExchangerComputerPort(), "heat_exchanger_computer_port");
 		
 		turbine_controller = withName(new BlockTurbineController(), "turbine_controller");
@@ -416,6 +396,8 @@ public class NCBlocks {
 		turbine_dynamo_coil = withName(new BlockTurbineDynamoCoil(), "turbine_dynamo_coil");
 		turbine_inlet = withName(new BlockTurbineInlet(), "turbine_inlet");
 		turbine_outlet = withName(new BlockTurbineOutlet(), "turbine_outlet");
+		turbine_door = withName(new BlockTurbineDoor(Material.IRON), "turbine_door");
+		turbine_trapdoor = withName(new BlockTurbineTrapdoor(Material.IRON), "turbine_trapdoor");
 		turbine_computer_port = withName(new BlockTurbineComputerPort(), "turbine_computer_port");
 		
 		if (NCConfig.register_passive[0]) {
@@ -572,6 +554,8 @@ public class NCBlocks {
 		registerBlock(salt_fission_distributor);
 		registerBlock(salt_fission_retriever);
 		registerBlock(salt_fission_redstone_port);
+		registerBlock(salt_fission_door);
+		registerBlock(salt_fission_trapdoor);
 		registerBlock(salt_fission_computer_port);
 		
 		registerBlock(heat_exchanger_controller);
@@ -585,8 +569,10 @@ public class NCBlocks {
 		registerBlock(heat_exchanger_condenser_tube_copper, TextFormatting.AQUA, InfoHelper.formattedInfo(fixedLine("heat_exchanger_condenser_tube"), Math.round(100D*NCConfig.heat_exchanger_conductivity[0]) + "%"), InfoHelper.formattedInfo(infoLine("heat_exchanger_condenser_tube")));
 		registerBlock(heat_exchanger_condenser_tube_hard_carbon, TextFormatting.AQUA, InfoHelper.formattedInfo(fixedLine("heat_exchanger_condenser_tube"), Math.round(100D*NCConfig.heat_exchanger_conductivity[1]) + "%"), InfoHelper.formattedInfo(infoLine("heat_exchanger_condenser_tube")));
 		registerBlock(heat_exchanger_condenser_tube_thermoconducting, TextFormatting.AQUA, InfoHelper.formattedInfo(fixedLine("heat_exchanger_condenser_tube"), Math.round(100D*NCConfig.heat_exchanger_conductivity[2]) + "%"), InfoHelper.formattedInfo(infoLine("heat_exchanger_condenser_tube")));
+		registerBlock(heat_exchanger_door);
+		registerBlock(heat_exchanger_trapdoor);
 		registerBlock(heat_exchanger_computer_port);
-		
+
 		registerBlock(turbine_controller);
 		registerBlock(turbine_wall);
 		registerBlock(turbine_glass);
@@ -600,8 +586,10 @@ public class NCBlocks {
 		registerBlock(turbine_dynamo_coil, new ItemBlockMeta(turbine_dynamo_coil, TurbineDynamoCoilType.class, NCInfo.dynamoCoilInfo()));
 		registerBlock(turbine_inlet);
 		registerBlock(turbine_outlet);
+		registerBlock(turbine_door);
+		registerBlock(turbine_trapdoor);
 		registerBlock(turbine_computer_port);
-		
+
 		if (NCConfig.register_passive[0]) {
 			registerBlock(helium_collector, InfoHelper.formattedInfo(infoLine("helium_collector"), UnitHelper.ratePrefix(NCConfig.processor_passive_rate[0], 5, "B", -1)));
 			registerBlock(helium_collector_compact, InfoHelper.formattedInfo(infoLine("helium_collector"), UnitHelper.ratePrefix(NCConfig.processor_passive_rate[0]*8, 5, "B", -1)));
@@ -768,8 +756,10 @@ public class NCBlocks {
 		registerRender(salt_fission_distributor);
 		registerRender(salt_fission_retriever);
 		registerRender(salt_fission_redstone_port, 0, "salt_fission_redstone_port_off");
+		registerRender(salt_fission_door);
+		registerRender(salt_fission_trapdoor);
 		registerRender(salt_fission_computer_port);
-		
+
 		registerRender(heat_exchanger_controller, 0, "heat_exchanger_controller_off");
 		registerRender(heat_exchanger_wall);
 		registerRender(heat_exchanger_glass);
@@ -781,8 +771,10 @@ public class NCBlocks {
 		registerRender(heat_exchanger_condenser_tube_copper);
 		registerRender(heat_exchanger_condenser_tube_hard_carbon);
 		registerRender(heat_exchanger_condenser_tube_thermoconducting);
+		registerRender(heat_exchanger_door);
+		registerRender(heat_exchanger_trapdoor);
 		registerRender(heat_exchanger_computer_port);
-		
+
 		registerRender(turbine_controller, 0, "turbine_controller_off");
 		registerRender(turbine_wall);
 		registerRender(turbine_glass);
@@ -798,8 +790,10 @@ public class NCBlocks {
 		}
 		registerRender(turbine_inlet);
 		registerRender(turbine_outlet);
+		registerRender(turbine_door);
+		registerRender(turbine_trapdoor);
 		registerRender(turbine_computer_port);
-		
+
 		if (NCConfig.register_passive[0]) {
 			registerRender(helium_collector);
 			registerRender(helium_collector_compact);

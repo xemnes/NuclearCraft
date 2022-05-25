@@ -34,6 +34,7 @@ public class AlloyFurnaceRecipes extends ProcessorRecipeHandler {
 		addAlloyIngotGemRecipes("Extreme", 1, "BoronArsenide", 1, "Thermoconducting", 2, 1.5D, 1.5D);
 		addAlloyIngotIngotRecipes("Zirconium", 7, "Tin", 1, "Zircaloy", 8, 4D, 1D);
 		addRecipe(SILICON, metalList("Graphite"), oreStack("ingotSiliconCarbide", 2), 2D, 2D);
+		addRecipe(oreStack("ingotSiliconCarbide", 1), oreStack("ingotHardCarbon", 1), oreStack("ingotSiCSiCCMC", 2), 6D, 2D);
 		addAlloyIngotIngotRecipes("Iron", 15, "CarbonManganese", 1, "HSLASteel", 16, 8D, 2D);
 		
 		// Tinkers' Construct

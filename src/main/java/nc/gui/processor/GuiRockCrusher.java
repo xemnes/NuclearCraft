@@ -50,8 +50,8 @@ public class GuiRockCrusher extends GuiItemProcessor {
 	}
 	
 	protected void drawUpgradeRenderers() {
-		new GuiItemRenderer(132, ySize - 102, 0.5F, NCItems.upgrade, 0).draw();
-		new GuiItemRenderer(152, ySize - 102, 0.5F, NCItems.upgrade, 1).draw();
+		new GuiItemRenderer(132, ySize - 102, 0.2F, NCItems.upgrade, 0).draw();
+		new GuiItemRenderer(152, ySize - 102, 0.2F, NCItems.upgrade, 1).draw();
 	}
 	
 	@Override

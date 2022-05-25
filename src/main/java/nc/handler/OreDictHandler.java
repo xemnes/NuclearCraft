@@ -418,9 +418,6 @@ public class OreDictHandler {
 		OreDictionary.registerOre("depletedFuelHECf251", new ItemStack(NCItems.depleted_fuel_californium, 1, 6));
 		OreDictionary.registerOre("depletedFuelHECf251Oxide", new ItemStack(NCItems.depleted_fuel_californium, 1, 7));
 		
-		OreDictionary.registerOre("depletedFuelIC2U", new ItemStack(NCItems.depleted_fuel_ic2, 1, 0));
-		OreDictionary.registerOre("depletedFuelIC2MOX", new ItemStack(NCItems.depleted_fuel_ic2, 1, 1));
-		
 		OreDictionary.registerOre("ingotBoron10", new ItemStack(NCItems.boron, 1, 0));
 		OreDictionary.registerOre("nuggetBoron10", new ItemStack(NCItems.boron, 1, 1));
 		OreDictionary.registerOre("ingotBoron11", new ItemStack(NCItems.boron, 1, 2));

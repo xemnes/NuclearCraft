@@ -93,6 +93,15 @@ public class CraftingRecipeHandler {
 		
 		addShapedOreRecipe(NCItems.reactor_door, new Object[] {"CC", "CC", "CC", 'C', new ItemStack(NCBlocks.fission_block, 1, 0)});
 		addShapedOreRecipe(NCBlocks.reactor_trapdoor, new Object[] {"CCC", "CCC", 'C', new ItemStack(NCBlocks.fission_block, 1, 0)});
+
+		addShapedOreRecipe(NCItems.salt_fission_door, new Object[] {"CC", "CC", "CC", 'C', new ItemStack(NCBlocks.salt_fission_wall, 1, 0)});
+		addShapedOreRecipe(NCBlocks.salt_fission_trapdoor, new Object[] {"CCC", "CCC", 'C', new ItemStack(NCBlocks.salt_fission_wall, 1, 0)});
+
+		addShapedOreRecipe(NCItems.heat_exchanger_door, new Object[] {"CC", "CC", "CC", 'C', new ItemStack(NCBlocks.heat_exchanger_wall, 1, 0)});
+		addShapedOreRecipe(NCBlocks.heat_exchanger_trapdoor, new Object[] {"CCC", "CCC", 'C', new ItemStack(NCBlocks.heat_exchanger_wall, 1, 0)});
+
+		addShapedOreRecipe(NCItems.turbine_door, new Object[] {"CC", "CC", "CC", 'C', new ItemStack(NCBlocks.turbine_wall, 1, 0)});
+		addShapedOreRecipe(NCBlocks.turbine_trapdoor, new Object[] {"CCC", "CCC", 'C', new ItemStack(NCBlocks.turbine_wall, 1, 0)});
 		
 		blockCompress(NCBlocks.block_depleted_thorium, 0, "blockThorium230", "ingotThorium230");
 		blockCompress(NCBlocks.block_depleted_uranium, 0, "blockUranium238", "ingotUranium238");

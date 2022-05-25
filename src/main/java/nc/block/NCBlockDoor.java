@@ -14,6 +14,8 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class NCBlockDoor extends BlockDoor {
+
+	protected static boolean keepInventory;
 	
 	public NCBlockDoor(Material material) {
 		super(material);

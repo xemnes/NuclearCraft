@@ -55,7 +55,7 @@ public class GuiFluidRenderer {
 			return;
 		}
 		TextureAtlasSprite icon = getStillTexture(fluid);
-		
+
 		int renderAmount = (int) Math.max(Math.min(height, amount * height / capacity), 1);
 		int posY = (int) (y + height - renderAmount);
 		

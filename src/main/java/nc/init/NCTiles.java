@@ -2,41 +2,11 @@ package nc.init;
 
 import nc.Global;
 import nc.multiblock.heatExchanger.HeatExchangerTubeType;
-import nc.multiblock.heatExchanger.tile.TileHeatExchangerComputerPort;
-import nc.multiblock.heatExchanger.tile.TileHeatExchangerCondenserTube;
-import nc.multiblock.heatExchanger.tile.TileHeatExchangerController;
-import nc.multiblock.heatExchanger.tile.TileHeatExchangerFrame;
-import nc.multiblock.heatExchanger.tile.TileHeatExchangerGlass;
-import nc.multiblock.heatExchanger.tile.TileHeatExchangerTube;
-import nc.multiblock.heatExchanger.tile.TileHeatExchangerVent;
-import nc.multiblock.heatExchanger.tile.TileHeatExchangerWall;
-import nc.multiblock.saltFission.tile.TileSaltFissionBeam;
-import nc.multiblock.saltFission.tile.TileSaltFissionComputerPort;
-import nc.multiblock.saltFission.tile.TileSaltFissionController;
-import nc.multiblock.saltFission.tile.TileSaltFissionDistributor;
-import nc.multiblock.saltFission.tile.TileSaltFissionFrame;
-import nc.multiblock.saltFission.tile.TileSaltFissionGlass;
-import nc.multiblock.saltFission.tile.TileSaltFissionHeater;
-import nc.multiblock.saltFission.tile.TileSaltFissionModerator;
-import nc.multiblock.saltFission.tile.TileSaltFissionRedstonePort;
-import nc.multiblock.saltFission.tile.TileSaltFissionRetriever;
-import nc.multiblock.saltFission.tile.TileSaltFissionVent;
-import nc.multiblock.saltFission.tile.TileSaltFissionVessel;
-import nc.multiblock.saltFission.tile.TileSaltFissionWall;
+import nc.multiblock.heatExchanger.tile.*;
+import nc.multiblock.saltFission.tile.*;
 import nc.multiblock.turbine.TurbineDynamoCoilType;
 import nc.multiblock.turbine.TurbineRotorBladeUtil.TurbineRotorBladeType;
-import nc.multiblock.turbine.tile.TileTurbineComputerPort;
-import nc.multiblock.turbine.tile.TileTurbineController;
-import nc.multiblock.turbine.tile.TileTurbineDynamoCoil;
-import nc.multiblock.turbine.tile.TileTurbineFrame;
-import nc.multiblock.turbine.tile.TileTurbineGlass;
-import nc.multiblock.turbine.tile.TileTurbineInlet;
-import nc.multiblock.turbine.tile.TileTurbineOutlet;
-import nc.multiblock.turbine.tile.TileTurbineRotorBearing;
-import nc.multiblock.turbine.tile.TileTurbineRotorBlade;
-import nc.multiblock.turbine.tile.TileTurbineRotorShaft;
-import nc.multiblock.turbine.tile.TileTurbineRotorStator;
-import nc.multiblock.turbine.tile.TileTurbineWall;
+import nc.multiblock.turbine.tile.*;
 import nc.tile.TileBin;
 import nc.tile.dummy.TileFissionPort;
 import nc.tile.dummy.TileFusionDummy;
@@ -102,6 +72,8 @@ public class NCTiles {
 		GameRegistry.registerTileEntity(TileSaltFissionDistributor.class, Global.MOD_ID + ":salt_fission_distributor");
 		GameRegistry.registerTileEntity(TileSaltFissionRetriever.class, Global.MOD_ID + ":salt_fission_retriever");
 		GameRegistry.registerTileEntity(TileSaltFissionRedstonePort.class, Global.MOD_ID + ":salt_fission_redstone_port");
+		GameRegistry.registerTileEntity(TileSaltFissionDoor.class, Global.MOD_ID + ":salt_fission_door");
+		GameRegistry.registerTileEntity(TileSaltFissionTrapdoor.class, Global.MOD_ID + ":salt_fission_trapdoor");
 		GameRegistry.registerTileEntity(TileSaltFissionComputerPort.class, Global.MOD_ID + ":salt_fission_computer_port");
 		
 		GameRegistry.registerTileEntity(TileHeatExchangerController.class, Global.MOD_ID + ":heat_exchanger_controller");
@@ -115,8 +87,10 @@ public class NCTiles {
 		GameRegistry.registerTileEntity(TileHeatExchangerCondenserTube.Copper.class, Global.MOD_ID + ":heat_exchanger_condenser_tube_" + HeatExchangerTubeType.COPPER.toString());
 		GameRegistry.registerTileEntity(TileHeatExchangerCondenserTube.HardCarbon.class, Global.MOD_ID + ":heat_exchanger_condenser_tube_" + HeatExchangerTubeType.HARD_CARBON.toString());
 		GameRegistry.registerTileEntity(TileHeatExchangerCondenserTube.Thermoconducting.class, Global.MOD_ID + ":heat_exchanger_condenser_tube_" + HeatExchangerTubeType.THERMOCONDUCTING.toString());
+		GameRegistry.registerTileEntity(TileHeatExchangerDoor.class, Global.MOD_ID + ":heat_exchanger_door");
+		GameRegistry.registerTileEntity(TileHeatExchangerTrapdoor.class, Global.MOD_ID + ":heat_exchanger_trapdoor");
 		GameRegistry.registerTileEntity(TileHeatExchangerComputerPort.class, Global.MOD_ID + ":heat_exchanger_computer_port");
-		
+
 		GameRegistry.registerTileEntity(TileTurbineController.class, Global.MOD_ID + ":turbine_controller");
 		GameRegistry.registerTileEntity(TileTurbineWall.class, Global.MOD_ID + ":turbine_wall");
 		GameRegistry.registerTileEntity(TileTurbineGlass.class, Global.MOD_ID + ":turbine_glass");
@@ -135,6 +109,8 @@ public class NCTiles {
 		GameRegistry.registerTileEntity(TileTurbineDynamoCoil.Silver.class, Global.MOD_ID + ":turbine_dynamo_coil_" + TurbineDynamoCoilType.SILVER.toString());
 		GameRegistry.registerTileEntity(TileTurbineInlet.class, Global.MOD_ID + ":turbine_inlet");
 		GameRegistry.registerTileEntity(TileTurbineOutlet.class, Global.MOD_ID + ":turbine_outlet");
+		GameRegistry.registerTileEntity(TileTurbineDoor.class, Global.MOD_ID + ":turbine_door");
+		GameRegistry.registerTileEntity(TileTurbineTrapdoor.class, Global.MOD_ID + ":turbine_trapdoor");
 		GameRegistry.registerTileEntity(TileTurbineComputerPort.class, Global.MOD_ID + ":turbine_computer_port");
 		
 		GameRegistry.registerTileEntity(TileRTG.Uranium.class, Global.MOD_ID + ":rtg_uranium");
